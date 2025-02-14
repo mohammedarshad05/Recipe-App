@@ -1,9 +1,14 @@
 header {
   text-align: center;
-  background-color: rgb(111, 111, 227);
-  padding: 5px;
+  background: linear-gradient(90deg, rgba(135, 206, 235, 1) 0%, rgba(70, 130, 180, 1) 100%);
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-h1{
+
+h1 {
   color: white;
   font-variant: small-caps;
-  }
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}

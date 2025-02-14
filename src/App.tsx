@@ -1,16 +1,47 @@
 import RecipeList from "./Components/RecipeList";
+import RecipeDetails from "./Components/RecipeDetails";
 import "./App.css";
-// import { Link, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Home from "./Components/Home";
+import About from "./Components/About";
 
 function App() {
-  
-  // <Link to="/recipes">Recipes</Link>
-    return (
-   
-         <><header>
-        <h1>MY RECIPE APP</h1>
-      </header><RecipeList /></>
-
-    );
+  return (
+    <Router>
+      <header>
+        <h1>React Demos</h1>
+      </header>
+      <nav className="navbar navbar-expand-lg bg-danger text-light">
+        <div className="container">
+          <a className="navbar-brand" href="#">Navbar</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/" className="nav-link active" aria-current="page">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/about">About Us</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/recipes">Recipe List</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} /> 
+          <Route path="/recipes" element={<RecipeList />} />
+          <Route path="/recipes/:id" element={<RecipeDetails />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
+
 export default App;
