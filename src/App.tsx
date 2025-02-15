@@ -9,11 +9,11 @@ function App() {
   return (
     <Router>
       <header>
-        <h1>React Demos</h1>
+        <h1>Recipe App</h1>
       </header>
-      <nav className="navbar navbar-expand-lg bg-danger text-light">
+      <nav className="navbar navbar-expand-lg bg-secondary bg-gradient text-light">
         <div className="container">
-          <a className="navbar-brand" href="#">Navbar</a>
+          <a className="navbar-brand" href="#">Recipe-App</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
